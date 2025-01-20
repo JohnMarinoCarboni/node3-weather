@@ -10,7 +10,7 @@ const forecast = (lat, lon, callback) => {
         } else if(body.error) {
             callback('invalid location input', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0]+'- It is currently '+body.current.temperature+' degrees out. it feels like '+body.current.feelslike+'. The humidity is '+body.current.humidity+'.')
+            callback(undefined, body.current.weather_descriptions[0]+'- It is currently '+body.current.temperature+' degrees out. it feels like '+body.current.feelslike+'. The humidity is '+body.current.humidity+'%')
         }
     })
 }
